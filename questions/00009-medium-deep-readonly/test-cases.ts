@@ -54,3 +54,5 @@ type Expected1 = {
 }
 
 type Expected2 = { readonly a: string } | { readonly b: number }
+
+type test111 = DeepReadonly<X1>

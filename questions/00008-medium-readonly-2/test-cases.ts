@@ -27,3 +27,18 @@ interface Expected {
   readonly description?: string
   completed: boolean
 }
+
+type kek = MyReadonly2<Todo2, 'description' >
+const kek: kek = {
+  title: 'asd',
+  completed: true,
+  description: 'awdawd'
+}
+
+// @ts-expect-error
+kek.title = '123'
+// @ts-expect-error
+kek.description = '123'
+
+
+
